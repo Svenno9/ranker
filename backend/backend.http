@@ -1,11 +1,6 @@
 @backend_HostAddress = http://localhost:5151
 @customId = 00000000-0000-0000-0000-000000000001
 
-GET {{backend_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
-
 GET {{backend_HostAddress}}/Item/
 Accept: application/json
 
