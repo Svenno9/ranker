@@ -1,0 +1,44 @@
+@backend_HostAddress = http://localhost:5151
+@customId = 00000000-0000-0000-0000-000000000001
+
+GET {{backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{backend_HostAddress}}/Item/
+Accept: application/json
+
+###
+
+GET {{backend_HostAddress}}/Item/{{customId}}
+Accept: application/json
+
+###
+
+POST {{backend_HostAddress}}/Item/
+Content-Type: application/json
+
+{
+  "title": "Hawaii"
+}
+
+###
+
+PUT {{backend_HostAddress}}/Item/{{customId}}
+Content-Type: application/json
+
+
+  {
+    "id": "{{customId}}",
+    "title": "Akira",
+    "score": 10,
+    "rank": 2
+  }
+
+
+###
+
+DELETE {{backend_HostAddress}}/Item/{{customId}}
+
+###
